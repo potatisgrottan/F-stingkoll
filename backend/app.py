@@ -21,9 +21,12 @@ async def read_about():
     "The purpose of this project is to sharpen my skills in react, javascript and python while hopefully creating a useful tool for tick recognition. "
     "The project is still in development but will hopefully be done in the near future."}
 
-@app.post("/fastingkoll/submit")
-async def submit_data(data: dict):
-    return {"received": data}
+@app.get("/contact")
+async def read_contact():
+    return {"message1": "Email: olleolheim@gmail.com",
+            "message2": "GitHub: https://github.com/potatisgrottan",
+            "message3": "Phone number: +46 ..."}
+
 
 if __name__ == "__main__":
     import uvicorn
