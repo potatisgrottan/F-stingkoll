@@ -15,6 +15,15 @@ app.add_middleware(
 async def read_root():
     return {"message": "Hello"}
 
+@app.get("/about")
+async def read_about():
+    return {"message": "This page is a personal project created by Olof Olheim. "
+    "The purpose of this project is to sharpen my skills in react, javascript and python while hopefully creating a useful tool for tick recognition. "
+    "The project is still in development but will hopefully be done in the near future."}
+
+@app.post("/fastingkoll/submit")
+async def submit_data(data: dict):
+    return {"received": data}
 
 if __name__ == "__main__":
     import uvicorn
