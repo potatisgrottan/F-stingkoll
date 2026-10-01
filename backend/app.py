@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -27,6 +27,9 @@ async def read_contact():
             "message2": "GitHub: https://github.com/potatisgrottan",
             "message3": "Phone number: +46 ..."}
 
+@app.post("/upload")
+async def upload_file(image: UploadFile = File(...)):
+    return {"message": "File uploaded successfully"}
 
 if __name__ == "__main__":
     import uvicorn

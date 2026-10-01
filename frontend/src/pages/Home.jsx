@@ -24,7 +24,10 @@ useEffect(() => {
   return (
     <div style={{ padding: '2rem', fontfamily: 'Arial, sans-serif' }}>
         <h1>Fästingkoll</h1>
-        <p>svar från backend: <strong>{message} </strong></p>
+        <Link to="/upload">
+          Analyze image for ticks
+        </Link>
+        <br />
         <Link to="/contact">
           Contact info
         </Link>
@@ -32,6 +35,7 @@ useEffect(() => {
         <Link to="/about">
           About page and developer
         </Link>
+
     </div>
   )
 }
