@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
+import {Link} from "react-router-dom";
 import '../App.css'
 
 function Home() {
@@ -24,6 +25,13 @@ useEffect(() => {
     <div style={{ padding: '2rem', fontfamily: 'Arial, sans-serif' }}>
         <h1>Fästingkoll</h1>
         <p>svar från backend: <strong>{message} </strong></p>
+        <Link to="/contact">
+          Contact info
+        </Link>
+        <br />
+        <Link to="/about">
+          About page and developer
+        </Link>
     </div>
   )
 }
